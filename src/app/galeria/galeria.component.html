@@ -1,0 +1,29 @@
+<div class="flex justify-content-center align-items-center h-screen background relative">
+  <!-- Botão de voltar -->
+  <div class="absolute top-0 left-0 m-3">
+    <p-button
+      icon="pi pi-arrow-left"
+      (onClick)="goBack()"
+      styleClass="p-button-text p-button-rounded">
+    </p-button>
+  </div>
+
+  <!-- Carousel de imagens -->
+<p-carousel
+  [value]="fotos"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="3000"
+  [ngStyle]="{ width: '100vw', height: '100vh' }"
+  [responsiveOptions]="responsiveOptions"
+>
+  <ng-template pTemplate="item" let-foto>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
+      <img [src]="foto.caminho" alt="Imagem da Galeria" style="width: 100%; height: 80vh; object-fit: cover;">
+      <div style="margin-top: 10px; font-size: 1.5rem; color: #333; text-align: center;">{{ foto.descricao }}</div>
+    </div>
+  </ng-template>
+</p-carousel>
+
+</div>

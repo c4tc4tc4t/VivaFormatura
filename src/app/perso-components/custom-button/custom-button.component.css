@@ -1,0 +1,17 @@
+.custom-button {
+  font-size: 1.8rem; /* Tamanho um pouco maior para o texto */
+  padding: 1rem 2.5rem; /* Aumenta levemente o tamanho dos botões */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto branca */
+  border: 2px solid #007bff; /* Borda azul */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.3s ease; /* Transição suave */
+  margin: 0 2rem; /* Margem lateral maior para espaçar os botões */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  border-color: #0056b3; /* Borda ao passar o mouse */
+  color: white;
+}

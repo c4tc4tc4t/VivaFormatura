@@ -1,0 +1,27 @@
+.p-grid {
+  width: 100%;
+}
+
+.p-col-12, .p-md-6, .p-lg-6 {
+  padding: 10px; /* Adiciona espaçamento entre os cards */
+}
+
+.custom-card {
+  height: 100%; /* Garante que o card ocupe a altura total */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* Define uma altura fixa para todas as imagens */
+  object-fit: cover; /* Mantém a proporção das imagens */
+}
+
+.card-title {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}

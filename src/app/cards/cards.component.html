@@ -1,0 +1,24 @@
+<div class="relative">
+  <!-- Botão de voltar -->
+  <div class="absolute top-0 left-0 m-3">
+    <p-button
+      icon="pi pi-arrow-left"
+      (onClick)="goBack()"
+      styleClass="p-button-text p-button-rounded">
+    </p-button>
+  </div>
+
+  <!-- Lista de cards -->
+  <div class="p-grid p-justify-center">
+    <div class="p-col-12 p-md-6 p-lg-6" *ngFor="let card of cards">
+      <p-card class="custom-card" (click)="onCardClick(card.collection)">
+        <ng-template pTemplate="header">
+          <img [src]="card.image" alt="Imagem do Card" class="card-image">
+        </ng-template>
+        <ng-template pTemplate="content">
+          <h2 class="card-title">{{ card.title }}</h2>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+</div>
