@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,20 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./options.component.css']
 })
 export class OptionsComponent {
+  @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
+  showDialog: boolean = false;
+  qrCodeUrl: string = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://vivaeventos.com.br/por-que-a-viva/';
 
   constructor(private router: Router) { }
 
+  ngAfterViewInit() {
+    if (this.videoElement) {
+      this.videoElement.nativeElement.muted = true;
+      this.videoElement.nativeElement.volume = 0; // Define o volume como zero para garantir
+    }
+  }
+
   onGalleryClick() {
-    console.log('Galeria clicado!');
     this.router.navigate(['/cards']);
   }
 
-  onVivaClick() {
-    console.log('Porque a Viva? clicado!');
-    window.open('https://vivaeventos.com.br/por-que-a-viva/', '_blank');
+  goBack() {
+    this.router.navigate(['/home']);
   }
 
-  goBack() {
-    this.router.navigate(['/home']); // Navega para a tela 'home'
-  }
 }

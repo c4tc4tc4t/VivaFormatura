@@ -1,3 +1,6 @@
-<button class="custom-button" (click)="handleClick()">
+<button
+  class="custom-button"
+  (click)="handleClick()"
+  [ngStyle]="{ height: height, width: width }">
   {{ label }}
 </button>

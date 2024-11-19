@@ -6,10 +6,12 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./custom-button.component.css']
 })
 export class CustomButtonComponent {
-  @Input() label: string = ''; // Define o rótulo do botão
+  @Input() label: string = '';
+  @Input() height: string = '50px'; // Altura padrão
+  @Input() width: string = '150px'; // Largura padrão
   @Output() clicked = new EventEmitter<void>();
 
   handleClick() {
-    this.clicked.emit(); // Emite o evento de clique
+    this.clicked.emit();
   }
 }

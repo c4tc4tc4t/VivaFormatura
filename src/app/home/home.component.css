@@ -12,12 +12,25 @@
 
 .centered-text {
   position: absolute;
-  top: 50%;
+  bottom: 17%; /* Ajuste esta porcentagem para posicionar mais abaixo ou mais acima */
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-  color: white; /* Cor branca */
+  transform: translateX(-50%);
+  font-size: 2.5em;
+  color: white;
   text-align: center;
   font-family: Arial, sans-serif;
   z-index: 2; /* Garante que o texto fique sobre o vídeo */
 }
+
+.top-image {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Aumentado para o dobro do tamanho original */
+  height: auto; /* Mantém a proporção da imagem */
+  z-index: 2; /* Garante que a imagem fique sobre o vídeo */
+}
+
+
+

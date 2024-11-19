@@ -17,11 +17,11 @@
   [autoplayInterval]="3000"
   [ngStyle]="{ width: '100vw', height: '100vh' }"
   [responsiveOptions]="responsiveOptions"
+  [showIndicators]="false"
 >
   <ng-template pTemplate="item" let-foto>
     <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%;">
-      <img [src]="foto.caminho" alt="Imagem da Galeria" style="width: 100%; height: 80vh; object-fit: cover;">
-      <div style="margin-top: 10px; font-size: 1.5rem; color: #333; text-align: center;">{{ foto.descricao }}</div>
+      <img [src]="foto.caminho" alt="Imagem da Galeria" style="width: 100%; height: 80vh; object-fit: contain;">
     </div>
   </ng-template>
 </p-carousel>
